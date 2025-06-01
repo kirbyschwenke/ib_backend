@@ -29,7 +29,7 @@ app.use(express.static('public'))
 
 // routes-----------------------------------
 app.get("/", (req, res) => {
-  res.send("Welcome to the homepage")
+  res.send("Welcome to the dashboard")
 })
 
 const userRouter = require("./routes/user")
@@ -43,7 +43,7 @@ app.use("/post", postRouter)
 
 // Homepage route
 app.get("/", (req, res) => {
-  res.send("Home")
+  res.send("Dashboard")
 })
 
 // run app
