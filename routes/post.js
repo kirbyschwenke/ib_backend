@@ -7,7 +7,7 @@ const path = require('path')
 // GET - Get all posts
 router.get('/', Utils.authenticateToken, (req, res) => {
   Post.find()
-    .populate('user', '_id firstName lastName')
+    .populate('user', '_id firstName lastName accessLevel')
     .then(posts => {
       if (!posts) {
         return res.status(404).json({ message: "No posts found" })
